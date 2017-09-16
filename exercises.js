@@ -19,7 +19,7 @@ var books = {
   author: "Ryan Holiday",
   category: "Self Help",
   pages: 200,
-}
+};
 console.log(books);
   
 /*
@@ -37,6 +37,16 @@ console.log(books);
  "My dog `name` is `age` year old and likes to `speak`."
 */ 
 
+var dog = {
+  name: "bob marley",
+  age: 420,
+  vegeterian: true,
+  color: ["jamaican","african-american"],
+  speak: function (){
+    return "bark!"
+  }
+}
+console.log("My dog " + dog.age + " year old & likes to " + dog.speak());
 
 
 //An empty object
@@ -52,7 +62,13 @@ console.log(books);
             
   Console.log the object.
 */
+var kicks = {};
 
+kicks.brand = "Puma";
+kicks.color = "Black";
+kicks.size = 9;
+kicks.buy = 60;
+console.log(kicks);
 
 /* 
 
@@ -62,7 +78,11 @@ console.log(books);
             - add a property named `size` and set it to a number value between `0` and `20`.
             - add a property named `contents` and set it to be an empty array.
 */
-
+var plainBox = {};
+plainBox.color = "Magenta";
+plainBox.size = 25;
+plainBox.contents = [];
+console.log(plainBox);
 
 /*
 5. Declare a variable named `stockCar` and create the following properties (key-value pairs) to the object:
@@ -72,7 +92,13 @@ console.log(books);
             - add a key named `driver` and set it to be `null`.
             - add a key named `passengers` and set it to be an empty array.
 */
-
+var stockCar = {
+  model: "Ford",
+  year: 2017,
+  automaticTransmission: true,
+  driver: null,
+  passengers: []
+};
 
 /*
 
@@ -90,7 +116,14 @@ console.log(books);
    the return value in a variable named `completePerson`. Use `console.log` three times to print the entire object, just 
    the value at `name`, and just the value at `age`.
  */
+var plainPerson = {};
 
+function buildPerson(person,nameString,age){
+  person.name = nameString;
+  person.age = age;
+  return person;
+}
+console.log(buildPerson(plainPerson,"Rick",20));
 
 /*
 7. Display values of objects that are inside an array
