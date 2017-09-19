@@ -223,16 +223,17 @@ console.log(printOrders(arrayOfObjects));
         to inspect your results.
 */
 var sumObj = {
-  a: undefined,
-  b: undefined,
-  c: undefined,
+  a: 10,
+  b: 67,
   result: undefined,
 };
 
 function objectAddition(object){
-  object .result = object.a + object.b;
-  return object;
+object.result = object.a + object.b;
+  return object.result;
 }
+var sumObjResult = objectAddition(sumObj);
+console.log(sumObjResult);
 
 /*
 9. Print sum function and add as new key-value
@@ -250,7 +251,12 @@ function objectAddition(object){
         Invoke this function and pass in your object. Further test by changing the values of the object being passed in or 
         **create more** objects and invoke your function multiple times.
  */
-
+function printObj (object){
+    object.output = object.a + " + " + object.b + " = " + object.result;
+    return object;
+}
+printObj(sumObj);
+console.log(sumObj);
 
 /*
 10. Putting stuff in `plainBox`
@@ -263,6 +269,18 @@ function objectAddition(object){
  */
 
 
+
+function putInPlainBox(object){
+  for(var i = 0; i < 10; i++){
+    var x = Math.floor(Math.random() * 10);
+object.contents.push(x);
+
+
+  }return object;
+}
+putInPlainBox(plainBox);
+console.log(plainBox);
+
 /*
 11. Detecting transmission
     Declare a function named detectingTransmission and a single parameter which will be an object. Within this function 
@@ -274,6 +292,14 @@ function objectAddition(object){
     Invoke your function and pass in your stockCar object, store the result to a variable named isAutomaticTransmission and use `console.log` to inspect your results.
  */
 
+function detectingTransmission(object){
+  if (object.automaticTransmission === true){
+    console.log("AutoMagic!!!");
+  }else{
+    console.log("Driiiiift");
+  } return object;
+}
+detectingTransmission(stockCar);
 
 /*
 12.  Who's driving this thing?!
