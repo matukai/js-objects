@@ -95,7 +95,7 @@ console.log(plainBox);
 var stockCar = {
   model: "Ford",
   year: 2017,
-  automaticTransmission: true,
+  automaticTransmission: false,
   driver: null,
   passengers: []
 };
@@ -116,7 +116,9 @@ var stockCar = {
    the return value in a variable named `completePerson`. Use `console.log` three times to print the entire object, just 
    the value at `name`, and just the value at `age`.
  */
+
 var plainPerson = {};
+var completePerson = "";
 
 function buildPerson(person,nameString,age){
   person.name = nameString;
@@ -124,6 +126,8 @@ function buildPerson(person,nameString,age){
   return person;
 }
 console.log(buildPerson(plainPerson,"Rick",20));
+console.log(buildPerson(plainPerson.name));
+console.log(buildPerson(plainPerson.age));
 
 /*
 7. Display values of objects that are inside an array
@@ -312,8 +316,16 @@ detectingTransmission(stockCar);
      Invoke your function and pass in your objects, store the result to a variable named stockCarWithDriver, and inspect 
       your results. Consider using `plainPerson` as your driver.
  */
+/*
+
+function addDriver(object,person){
+  object.driver = person;
+}
+addDriver(stockCar,completePerson);
+console.log(addDriver(stockCar,completePerson));
 
 
+*/
 /*
     #Final Boss
     The Dev League instructors want to ride your whip!
