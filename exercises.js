@@ -118,16 +118,16 @@ var stockCar = {
  */
 
 var plainPerson = {};
-var completePerson = "";
 
 function buildPerson(person,nameString,age){
   person.name = nameString;
   person.age = age;
   return person;
 }
-console.log(buildPerson(plainPerson,"Rick",20));
-console.log(buildPerson(plainPerson.name));
-console.log(buildPerson(plainPerson.age));
+var completePerson = buildPerson(plainPerson,"Rick",20);
+
+console.log(completePerson);
+console.log(plainPerson.name);
 
 /*
 7. Display values of objects that are inside an array
@@ -316,16 +316,14 @@ detectingTransmission(stockCar);
      Invoke your function and pass in your objects, store the result to a variable named stockCarWithDriver, and inspect 
       your results. Consider using `plainPerson` as your driver.
  */
-/*
 
 function addDriver(object,person){
   object.driver = person;
+  return person;
 }
-addDriver(stockCar,completePerson);
-console.log(addDriver(stockCar,completePerson));
+var stockCarWithDriver = addDriver(stockCar,plainPerson);
+console.log(stockCarWithDriver);
 
-
-*/
 /*
     #Final Boss
     The Dev League instructors want to ride your whip!
